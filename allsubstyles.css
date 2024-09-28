@@ -1,0 +1,237 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+    background-image: url('all-sub.jpg'); /* Add the background image here */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6f61;
+}
+
+main {
+    padding: 80px 20px 20px; /* Adjust padding to avoid content overlap with fixed header */
+}
+
+.subjects {
+    margin-top: 20px;
+}
+
+.subjects h1, .subjects h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #FFFFFF, #FCFEEC, #ECFEFC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subject-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.subject-item {
+    flex: 1 1 calc(33.333% - 20px);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background: #333; /* Default background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.bg1 { background: #f44336; }
+.bg2 { background: #e91e63; }
+.bg3 { background: #9c27b0; }
+.bg4 { background: #673ab7; }
+.bg5 { background: #3f51b5; }
+.bg6 { background: #2196f3; }
+.bg7 { background: #08C2C0; }
+.bg8 { background: #00bcd4; }
+.bg9 { background: #009688; }
+.bg10 { background: #4caf50; }
+.bg11 { background: #8bc34a; }
+.bg12 { background: #cddc39; }
+.bg13 { background: #15AB00; }
+.bg14 { background: #ffc107; }
+.bg15 { background: #ff9800; }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+    }
+    
+    .hamburger span {
+        display: block;
+        height: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+    
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 70px;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .subject-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* allsubstyles.css */
+@import url('https://fonts.googleapis.com/css2?Roboto&display=swap');
+
+
+                        
+                            
+
+                        
+                            
+@import url('https://fonts.googleapis.com/css2?Prata&display=swap');
+
+.btn {
+    cursor: pointer; border: 0px solid rgb(187, 204, 0); font-family: Prata; font-size: 19px; color: rgb(255, 255, 255); padding: 10px 30px; transition: 2s; width: 335px; box-shadow: rgb(255, 255, 255) 5px 5px 25px 5px; border-radius: 50px 0px; background: linear-gradient(90deg, rgb(204, 0, 0) 0%, rgb(255, 242, 1) 100%); font-weight: 400; --hover-borderSize: 1px; --hover-color: #cc007e;
+}
+
+
+.btn:hover{
+    
+color: rgb(204, 0, 126);
+width: 337px;
+background: rgb(0, 102, 204) none repeat scroll 0% 0% / auto padding-box border-box;
+border-color: rgb(204, 0, 105);
+border-width: 1px;
+border-style: solid;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align the text */
+    padding: 10px 0; /* Add some padding */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px; /* Adjust font size */
+    z-index: 1000; /* Ensure it stays above other content */
+    flex-shrink: 0; /* Ensure footer doesn't shrink */
+    position: relative; /* Ensure footer is positioned correctly */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}

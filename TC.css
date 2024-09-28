@@ -1,0 +1,70 @@
+body {
+    background-image: url('about-teachers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff, 0 0 45px #ffffff;
+}
+
+.teacher-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 1; /* Allows this section to grow and fill available space */
+}
+
+.teacher-column {
+    width: 45%;
+}
+
+dt {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 1em;
+}
+
+a img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    flex-shrink: 0; /* Ensures the footer stays at the bottom */
+}
+
+footer p {
+    margin: 0; /* Removes extra spacing around the paragraph */
+}

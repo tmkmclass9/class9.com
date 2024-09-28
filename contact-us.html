@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact-us.css">
+    <link rel="icon" href="Logo.jpg" type="image/png">
+</head>
+<body>
+    
+    <audio id="pageAudio" src="Contact.mp3"></audio> 
+
+    <header>
+        <div class="logo-container">
+            <a href="home.html"> <img src="Logo.jpeg" alt="Logo" class="logo"></a>
+            <div class="logo-name">TMKM Class 9</div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="class-routine.html">Class Routine</a></li>
+                <li><a href="all-subjects.html">All Subjects</a></li>
+                <li><a href="special-announcements.html">Special Announcements</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us-section">
+            <h1>Contact Us</h1>
+            <div class="contact-form-container">
+                <p>We value your feedback! Please rate us and provide your feedback by contacting us through the form below.</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="4cf28941-26ea-4d30-ac41-ef49fc24bdfd">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roll">Roll</label>
+                        <input type="text" id="roll" name="roll" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button class="btn" id="customBtn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="reaction-section">
+            <h1>React to this website please</h1>
+            <div class="reactions">
+                <span class="reaction" onclick="toggleReaction('like')">👍 <span id="like-count">0</span></span>
+                <span class="reaction" onclick="toggleReaction('heart')">❤️ <span id="heart-count">0</span></span>
+                <span class="reaction" onclick="toggleReaction('care')">🤗 <span id="care-count">0</span></span>
+                <span class="reaction" onclick="toggleReaction('angry')">😡 <span id="angry-count">0</span></span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TMKM Class 9. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #222; /* Fallback color */
+    background-image: url('about-us.jpg'); /* Background image URL */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the image stay in place during scrolling */
+}
+
+/* Other styles remain the same */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #ffeb3b; /* Bright yellow for the logo name */
+}
+
+.logo {
+    height: 100px;
+}
+
+nav {
+    position: relative;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6f61;
+}
+
+/* About Us section */
+main {
+    padding: 50px 20px;
+}
+
+.about-us-section {
+    text-align: center;
+}
+
+.about-us-section h1 {
+    font-size: 2.5rem;
+    color: yellow; /* Vibrant orange for the main heading */
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #ff5722, 0 0 15px #ff5722; /* Glowing effect */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    color: #ffeb3b; /* Bright yellow for section titles */
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px #ffeb3b, 0 0 12px #ffeb3b; /* Glowing effect */
+}
+
+.about-text span {
+    font-size: 1rem;
+    color: #ccc; /* Light grey for text */
+    margin-bottom: 20px;
+    text-shadow: 0 0 6px whitesmoke, 0 0 12px white; /* Glowing effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+    }
+    .hamburger span {
+        display: block;
+        height: 4px;
+        background-color: #f0f0f0;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+}
+
+
+                        
+                            
+@import url('https://fonts.googleapis.com/css2?Bebas+Neue&display=swap');
+
+.btn {
+    cursor: pointer; border: solid rgb(187, 204, 0); font-family: "Bebas Neue"; font-size: 25px; color: rgb(79, 82, 89); padding: 10px 30px; transition: 2s; width: 335px; box-shadow: rgb(0, 0, 0) 5px 5px 25px 5px; border-radius: 25px 6px 50px 5px; background: linear-gradient(90deg, rgb(255, 1, 1) 0%, rgb(223, 255, 96) 100%);
+}
+
+
+.btn:hover{
+    
+color: rgb(255, 255, 255);
+width: 337px;
+background: rgb(0, 102, 204) none repeat scroll 0% 0% / auto padding-box border-box;
+border-color: rgb(204, 0, 105);
+border-width: 2px;
+border-style: solid;
+}
+
+
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0; /* Added a bit more padding for better spacing */
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    position: relative;
+    z-index: 1000;
+    margin-top: 50px; /* Adjusted margin-top to ensure it doesn’t overlap with main content */
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}

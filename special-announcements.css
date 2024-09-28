@@ -1,0 +1,214 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #222; /* Fallback color */
+    background-image: url('special.jpg'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the image stay in place during scrolling */
+}
+
+/* Header background image */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Ensure header is positioned correctly */
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6f61;
+}
+
+.announcement-section {
+    padding: 50px 20px;
+    text-align: center;
+    position: relative; /* Ensure it is positioned correctly */
+    z-index: 1; /* Ensure it is below the hamburger menu */
+}
+
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #ffeb3b; /* Bright yellow for the logo name */
+}
+
+.logo {
+    height: 100px;
+}
+
+nav {
+    position: relative;
+}
+
+/* Announcement section */
+.announcement-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.announcement-section h1 {
+    font-size: 2.5rem;
+    color: #ff5722; /* Vibrant orange for the main heading */
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #ff5722, 0 0 15px #ff5722; /* Glowing effect */
+}
+
+.announcement-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.announcement {
+    background-color: #444;
+    padding: 20px;
+    margin: 20px 0;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement:hover {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.announcement h2 {
+    font-size: 1.8rem;
+    color: #ffeb3b; /* Bright yellow for announcement titles */
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px #ffeb3b, 0 0 12px #ffeb3b; /* Glowing effect */
+}
+
+.announcement p {
+    font-size: 1rem;
+    color: #ccc; /* Light grey for announcement text */
+}
+
+/* Glow Link */
+.glow-link {
+    color: #04CEFF;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+}
+
+.glow-link:hover {
+    text-shadow: 0 0 20px rgba(0, 0, 255, 1);
+}
+
+
+                        
+                            
+@import url('https://fonts.googleapis.com/css2?Roboto&display=swap');
+
+.btn {
+    cursor: pointer; border: solid rgb(104, 105, 100); font-family: "system-ui"; font-size: 14px; color: rgb(255, 255, 255); padding: 10px 30px; transition: 2s; width: 335px; box-shadow: rgb(209, 207, 207) 5px 5px 25px 5px; border-radius: 0px 50px; background: linear-gradient(202deg, rgb(138, 122, 122) 0%, rgb(0, 0, 0) 100%); --hover-bgc: #959da6; --hover-color: #000000; --hover-borderc: #32f0fa; --hover-borderSize: 0px;
+}
+
+
+.btn:hover{
+    
+color: rgb(0, 0, 0);
+width: 337px;
+background: rgb(149, 157, 166) none repeat scroll 0% 0% / auto padding-box border-box;
+border-color: rgb(50, 240, 250);
+border-width: 0px;
+border-style: solid;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .logo-name {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align the text */
+    padding: 10px 0; /* Add some padding */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px; /* Adjust font size */
+    z-index: 1000; /* Ensure it stays above other content */
+    flex-shrink: 0; /* Ensure footer doesn't shrink */
+    position: relative; /* Ensure footer is positioned correctly */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
