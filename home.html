@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMKM Class 9 | HOME</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Logo.jpg" type="image/png">
+</head>
+<body>
+    <!-- Add audio elements -->
+    <audio id="audio1" src="Thank you.mp3"></audio>
+    <audio id="audio2" src="Super Ai.mp3"></audio>
+
+    <!-- Rest of your home.html content goes here -->
+    <div class="background-container">
+        <div class="content">
+            <header>
+                <div class="logo-container">
+                    <div class="logo-name">TMKM Class 9</div>
+                    <div class="logo">
+                        <a href="home.html"> <img src="Logo.jpeg" alt="Logo" class="logo"></a>
+                    </div>
+                </div>
+                <nav>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="class-routine.html">Class Routine</a></li>
+                        <li><a href="all-subjects.html">All Subjects</a></li>
+                        <li><a href="special-announcements.html">Special Announcements</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h1 class="animated-title">Welcome to Our Class</h1>
+                <p class="animated-subtitle">Your journey starts here!</p>
+                <p class="info">তামিরুল মিল্লাত কামিল মাদ্রাসা বাংলাদেশের একটি ধর্মীয় উচ্চ শিক্ষা প্রতিষ্ঠান। তামিরুল মিল্লাত ট্রাস্ট পরিচালিত মাদ্রাসাটি দেশের সব মাদ্রাসার মধ্যে শীর্ষ ফলাফলের স্থান দখলের পাশাপাশি ঢাকা বিশ্ববিদ্যালয়সহ দেশের সব নামকরা বিশ্ববিদ্যালয়ের প্রবেশিকা পরীক্ষায় ভালো ফলাফল করতে দেখা যায়। এই ওয়েবসাইটটি এই প্রতিষ্ঠানের ৯ম শ্রেণীর সকল শাখার জন্য। আমরা আশা করি আমাদের সকল সহপাঠীরা এই ওয়েবপেইজটি পছন্দ করবে এবং এটি তাদের জন্য প্রয়োজনীয় হবে।</p><br>
+
+                <div class="button-container">
+                    <a href="class-routine.html" class="btn">
+                      <button class="btn">Check Class Routine</button>
+                    </a><br><br><br><br><br><br>
+                    <a href="about-teachers.html" class="btn">
+                        <button class="btn">Know about our teachers</button>
+                    </a>
+                </div>
+                <br><br><br><br><br>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/UARf2WGTUXY" title="How to use TMKM class 9 website." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TMKM Class 9. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Trigger the audios to play when the page loads
+        window.onload = function() {
+            // Check if the audio has already been played in this session
+            if (!sessionStorage.getItem('audioPlayed')) {
+                const audio1 = document.getElementById('audio1');
+                const audio2 = document.getElementById('audio2');
+                const videoFrame = document.querySelector('.video-container iframe');
+    
+                // Play the first audio
+                audio1.play();
+    
+                // When the first audio ends, play the second one
+                audio1.addEventListener('ended', function() {
+                    audio2.play();
+                });
+    
+                // When the second audio ends, scroll to the video and play it
+                audio2.addEventListener('ended', function() {
+                    // Scroll to the video container smoothly
+                    document.querySelector('.video-container').scrollIntoView({ behavior: 'smooth' });
+    
+                    // Auto-play the YouTube video
+                    videoFrame.src += "?autoplay=1";  // Append autoplay parameter to the iframe URL
+                });
+    
+                // Set a flag in sessionStorage to indicate that the audios have been played
+                sessionStorage.setItem('audioPlayed', 'true');
+            }
+        };
+    
+        // Toggle navigation menu for mobile view
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>    
+    
+</body>
+</html>
